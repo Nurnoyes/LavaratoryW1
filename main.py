@@ -65,16 +65,40 @@ class Menu:
         else:
             print("You didn't write an integer value. Please rewrite what is asked: ")
     for i in range(numofdrinks):
-        name = str(input('Enter the name of the drink: '))
-        volume = int(input('Enter the volume of the drink: '))
-        price = int(input('Enter the price of the drink: '))
+        while(True):
+            name = input('Enter the name of the drink: ')
+            if name.isdigit():
+                print("You didn't write a string , there is no such existing drink out there. Rewrite the name: ")
+            else:
+                name = str(name)
+                break
+        while (True):
+            volume = input('Enter the volume of the drink: ')
+            if volume.isdigit():
+                volume = int(volume)
+                break
+            else:
+                print("You didn't write an integer value. Please rewrite what is asked: ")
+        while (True):
+            price = input('Enter the price of the drink: ')
+            if price.isdigit():
+                price = int(price)
+                break
+            else:
+                print("You didn't write an integer value. Please rewrite what is asked: ")
         alcohol = bool(input('If it has an alcohol, enter 1(else 0): '))
 
         obj = Drink(price, volume, name, alcohol).__dict__
         data['TheMenu'].append(obj)
         TheDrinks.append(obj)
     for i in range(numoffood):
-        name = str(input('Enter the name of the food: '))
+        while (True):
+            name = input('Enter the name of the food: ')
+            if name.isdigit():
+                print("You didn't write a string , there is no such existing food out there. Rewrite the name: ")
+            else:
+                name = str(name)
+                break
         portion = int(input('Enter the portion of the food: '))
         price = int(input('Enter the price of the food: '))
 
@@ -97,14 +121,14 @@ print("What do you want to order?We have:")
 sum = 0
 for i in TheDrinks:
         sum += 1
-        print(str(sum) + '.' + str(i['name']) + ' Volume: ' + str(i['volume']))
+        print(str(sum) + '.' + str(i['name']) + " " + str(i['volume']) + " "+str(i['volume']))
 while(True):
         thebuying = int(input('Enter what you want to buy(0 if nothing): '))
         if (thebuying == 0 or thebuying > sum) :
             break
         else:
             #y = ET.SubElement(x, (TheDrinks[thebuying-1]['name'] + " " + str(TheDrinks[thebuying-1]['price'])))
-            y = ET.SubElement(x, (str(ourfile['TheMenu'][thebuying-1]['name']) + " " + str(ourfile['TheMenu'][thebuying-1]['price'])))
+            y = ET.SubElement(x, (str(ourfile['TheMenu'][thebuying-1]['name']) + " "  + str(ourfile['TheMenu'][thebuying-1]['price'])))
             #data['TheMenu'].append(TheDrinks[thebuying-1])
             #totalsum += TheDrinks[thebuying-1]['price']
         agreement = str(input("Wanna order other drink?(Y if yes | N if No) "))

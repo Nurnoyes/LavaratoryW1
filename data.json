@@ -1,29 +1,18 @@
 {
     "TheMenu": [
         {
-            "price": 50,
-            "volume": 100,
+            "price": 2342,
+            "volume": 1000,
             "name": "cola",
             "alcohol": true
         },
         {
-            "price": 40,
-            "volume": 100,
-            "name": "beer",
-            "alcohol": true
-        },
-        {
-            "price": 200,
-            "portion": 400,
-            "name": "pie"
-        },
-        {
-            "price": 30,
-            "portion": 100,
-            "name": "apple"
+            "price": 400,
+            "portion": 1000,
+            "name": "sdkfjlds"
         }
     ],
     "totalsum": [
-        320
+        2742
     ]
 }
