@@ -1,18 +1,6 @@
 {
-    "TheMenu": [
-        {
-            "price": 2342,
-            "volume": 1000,
-            "name": "cola",
-            "alcohol": true
-        },
-        {
-            "price": 400,
-            "portion": 1000,
-            "name": "sdkfjlds"
-        }
-    ],
+    "TheMenu": [],
     "totalsum": [
-        2742
+        0
     ]
 }

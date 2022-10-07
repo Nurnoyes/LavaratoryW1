@@ -21,9 +21,11 @@ class Food:
         self.price = price
         self.portion = portion
         self.name = name
+        data['TheMenu'].append(self.__dict__)
     price = 0
     portion = ''
     name = ''
+
     def setFood(self, price, portion, name):
         self.price = price
         self.portion = portion
@@ -39,6 +41,7 @@ class Drink:
         self.volume = volume
         self.name = name
         self.alcohol = alcohol
+        data['TheMenu'].append(self.__dict__)
 
 
     def setDrink(self, price, volume, name, alcohol):
@@ -89,7 +92,6 @@ class Menu:
         alcohol = bool(input('If it has an alcohol, enter 1(else 0): '))
 
         obj = Drink(price, volume, name, alcohol).__dict__
-        data['TheMenu'].append(obj)
         TheDrinks.append(obj)
     for i in range(numoffood):
         while (True):
@@ -103,13 +105,13 @@ class Menu:
         price = int(input('Enter the price of the food: '))
 
         obj = Food(name,price,portion).__dict__
-        data['TheMenu'].append(obj)
         TheFood.append(obj)
     def getSum(self):
         for i in range(len(data['TheMenu'])):
             self.totalsum += data['TheMenu'][i]['price'];
         data['totalsum'].append(self.totalsum)
         return self.totalsum
+
 x = ET.Element('Order')
 Firstp = Menu();
 Firstp.getSum();
@@ -155,7 +157,6 @@ while (True):
         else:
             #data['totalsum'].append(totalsum)
             break
-
 
 
 
