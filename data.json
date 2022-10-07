@@ -1,0 +1,29 @@
+{
+    "TheMenu": [
+        {
+            "price": 50,
+            "volume": 100,
+            "name": "cola",
+            "alcohol": true
+        },
+        {
+            "price": 40,
+            "volume": 100,
+            "name": "beer",
+            "alcohol": true
+        },
+        {
+            "price": 200,
+            "portion": 400,
+            "name": "pie"
+        },
+        {
+            "price": 30,
+            "portion": 100,
+            "name": "apple"
+        }
+    ],
+    "totalsum": [
+        320
+    ]
+}
